@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.Body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #39bda7;
+}
+.Card{
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 11px 15px 41px 0px rgba(0,0,0,0.75);
+    border-radius: 5px;
+    background-color: #fff;
+}
+.inputDatos{
+    width: 90%;
+    height: 50px;
+    margin: 1em 0;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 1em;
+}
+.inputDatos:focus{
+    outline: none;
+    border: 2px solid #39bda7;
+    
+}
+.recoveryPass{
+    cursor: pointer;
+    margin: 14px 0;
+    color: #39bda7;
+}
+.recoveryPass:hover{
+    text-decoration: underline;
+}
+.imgLogo{
+    width: 200px;
+    margin: 1rem;
+}
+/*Boton*/
+.button {
+    margin: 1em;
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid #4f4f4f;
+    border-radius: 4px;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    font-size: 19px;
+    color: black;
+    z-index: 1;
+    background-color: transparent;
+}
+   
+.button:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+   
+.button:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #39bda7;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+   
+.button:hover {
+    color: #ffffff;
+    border: 1px solid #39bda7;
+}
+   
+.button:hover:before {
+    top: -35%;
+    background-color: #39bda7;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+   
+.button:hover:after {
+    top: -45%;
+    background-color: #39bda7;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+@media (max-width: 500px) {
+    .Body{
+        height: 100vh;
+        flex-direction: column;
+        justify-content: start;
+    }
+    .Card{
+        margin-top: 20%;
+        width: 90%;
+        height: auto;
+        overflow: auto;
+    }
+    .imgLogo{
+        height: auto;
+    }
+    .button{
+        margin: 1em 1em 2em 1em;
+    }
+}
